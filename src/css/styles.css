@@ -1,0 +1,83 @@
+body {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #515151;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  transition: font-size 0.35s ease-in-out;
+  font-weight: 700;
+  color: #040503;
+}
+
+h1 {
+  font-size: clamp(48px, 2.917vw, 56px);
+}
+
+h2 {
+  font-size: clamp(40px, 2.5vw, 48px);
+}
+
+h3 {
+  font-size: clamp(26px, 1.667vw, 32px);
+}
+
+h4 {
+  font-size: clamp(23px, 1.25vw, 24px);
+}
+
+h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+caption, .caption {
+  font-size: 14px;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+a {
+  color: #515151;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  width: fit-content;
+}
+a::after {
+  content: "";
+  background-color: #515151;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.111rem;
+  transition: all 0.35s ease-in-out;
+}
+a:hover::after, a:focus::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 380px) {
+  h5 {
+    font-size: 20px;
+  }
+  caption, .caption {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
