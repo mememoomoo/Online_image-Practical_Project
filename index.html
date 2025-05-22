@@ -7,22 +7,88 @@
 
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/fonts.css">
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/style.css">
     
     <script src="src/js/main.js" defer></script>
 </head>
 <body>
-    <h1>Heading H1</h1>
-    <h2>Heading H2</h2>
-    <h3>Heading H3</h3>
-    <h4>Heading H4</h4>
-    <h5>Heading H5</h5>
-    <p>Paragraph</p>
-    <p><strong>Bold Paragraph</strong></p>
-    <p><em>Italic Paragraph</em></p>
-    <p><strong><em>Bold Italic Paragraph</em></strong></p>
-    <caption>Caption</caption>
-    <button>Button</button>
-    <a href="#">Link</a>
+    <div class="nav-container">
+        <div class="cta-nav">
+            <div class="container">
+                <div class="cta-nav__left">
+                    <a href="tel:+13852440355" target="_blank" alt="Call us at 385-244-0355"><img src="src/img/img-icon-Phone.svg" aria-hidden="true" /><strong>385-244-0355</strong></a>
+                    <a href="mailto:" target="_blank" alt="Email us at #"><img src="src/img/img-icon-Envelope.svg" aria-hidden="true" /><strong>Send Message</strong></a>
+                </div>
+                <div class="cta-nav__right">
+                    <a href="#" alt="Link to Location Finder">Find a Location</a>
+                    <a href="#" alt="Link to Contact Page">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav-container">
+            <div class="container">
+                <nav>
+                    <a class="main-nav__logo" href="#" alt="Sparrow Electric logo. Click to Return Home">
+                        <img aria-hidden="true" src="src/img/img-SparrowElectric-Logo-White.svg" />
+                    </a>
+                    <ul class="main-nav">
+                            <li>
+                                <a href="#">How We Help</a>
+                            </li>
+                            <li>
+                                <a href="#">What We Offer</a>
+                            </li>
+                            <li>
+                                <a href="#">Financial Help Center</a>
+                            </li>
+                            <li>
+                                <a href="#">Why Sparrow Solar</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="main-nav__button">
+                            <p>Request A Quote</p>
+                            <img src="src/img/img-icon-ArrowRight.svg" aria-hidden="true" />
+                        </a>
+                </nav>
+            </div>
+        </div>
+        <div class="hero-cta">
+            <div class="container">
+                <div class="hero-cta__content">
+                    <img src="src/img/img-icon-Lightning.svg" aria-hidden="true" />
+                    <p>Give us a call today and we will waive all financing fees.</p>
+                    <a class="caption" href="#" alt="Link for more information on offer">See Details</a>
+                </div>
+                <button id="hero-cta-button" aria-label="Close">
+                    <svg aria-hidden="true" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.2" d="M12.5 21C17.4706 21 21.5 16.9706 21.5 12C21.5 7.02944 17.4706 3 12.5 3C7.52944 3 3.5 7.02944 3.5 12C3.5 16.9706 7.52944 21 12.5 21Z" fill="black" fill-opacity="0.5"/>
+                        <path d="M12.5 21C17.4706 21 21.5 16.9706 21.5 12C21.5 7.02944 17.4706 3 12.5 3C7.52944 3 3.5 7.02944 3.5 12C3.5 16.9706 7.52944 21 12.5 21Z" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M15.5 9L9.5 15" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.5 15L9.5 9" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="hero-container">
+        <div class="container">
+            <h1>Are You Ready To Cut Your Energy Bill?</h1>
+            <p>Sparrow Electric helps homeowners from coast to coast with the best solar financing options.</p>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <div class="breadcrumb-container">
+        <div class="container">
+            <div id="breadcrumb">
+                <a href="#" alt="Click to return Home">Home</a> / <p class="current-page">Who We Help</p>
+            </div>
+        </div>
+    </div>
+    <section class="help-section">
+        <div class="container">
+            <h2 class="center">We Can Help You Make The Switch To Solar Power</h2>
+            <p class="center">Solar power provides one of the best ways to go green if you want a reliable alternative for power. Sparrow Electric believes that solar power should be affordable and attainable by every homeowner. Using solar energy to power your home is a responsible action that should be rewarded and encouraged. That's why we do everything to help people obtain financing, so they qualify to have residential solar panels installed on their homes.</p>
+        </div>
+    </section>
 </body>
 </html>

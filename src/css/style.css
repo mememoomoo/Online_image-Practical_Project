@@ -1,0 +1,333 @@
+body {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #515151;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  transition: font-size 0.35s ease-in-out;
+  font-weight: 700;
+  color: #040503;
+}
+
+h1, .h1 {
+  font-size: clamp(48px, 2.917vw, 56px);
+}
+
+h2, .h2 {
+  font-size: clamp(40px, 2.5vw, 48px);
+  padding-bottom: 25px;
+}
+
+h3, .h3 {
+  font-size: clamp(26px, 1.667vw, 32px);
+}
+
+h4, .h4 {
+  font-size: clamp(23px, 1.25vw, 24px);
+}
+
+h5, .h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+caption, .caption {
+  font-size: 14px;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+a {
+  color: #515151;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  width: fit-content;
+}
+a::after {
+  content: "";
+  background-color: #515151;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.111rem;
+  transition: width 0.35s ease-in-out;
+}
+a:hover::after, a:focus::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 380px) {
+  h5 {
+    font-size: 20px;
+  }
+  caption, .caption {
+    font-size: 16px;
+  }
+}
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+.center {
+  text-align: center;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.nav-container .cta-nav {
+  background: #E2E2E2;
+  padding: 5px 0;
+}
+.nav-container .cta-nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-container .cta-nav .container .cta-nav__left, .nav-container .cta-nav .container .cta-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-container .cta-nav .container .cta-nav__left > a, .nav-container .cta-nav .container .cta-nav__right > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-container .cta-nav .container .cta-nav__left > a::after {
+  content: unset;
+}
+.nav-container .cta-nav .container .cta-nav__left > a > strong {
+  display: block;
+  position: relative;
+}
+.nav-container .cta-nav .container .cta-nav__left > a > strong::after {
+  content: "";
+  background-color: #515151;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.111rem;
+  transition: width 0.35s ease-in-out;
+}
+.nav-container .cta-nav .container .cta-nav__left > a:hover > img, .nav-container .cta-nav .container .cta-nav__left > a:focus > img {
+  animation: shake 0.35s ease-in-out;
+}
+.nav-container .cta-nav .container .cta-nav__left > a:hover > strong::after, .nav-container .cta-nav .container .cta-nav__left > a:focus > strong::after {
+  width: 100%;
+}
+.nav-container .header-nav-container {
+  padding-top: 25px;
+}
+.nav-container .header-nav-container .container > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container .header-nav-container .container > nav .main-nav__logo::after {
+  content: unset;
+}
+.nav-container .header-nav-container .container > nav .main-nav__logo > img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s ease-in-out;
+}
+.nav-container .header-nav-container .container > nav .main-nav__logo:hover > img, .nav-container .header-nav-container .container > nav .main-nav__logo:focus > img {
+  transform: scale(1.1);
+}
+.nav-container .header-nav-container .container > nav .main-nav {
+  display: flex;
+  gap: clamp(15px, 1.302vw, 25px);
+}
+.nav-container .header-nav-container .container > nav .main-nav a {
+  color: #ffffff;
+}
+.nav-container .header-nav-container .container > nav .main-nav a::after {
+  background: #ffffff;
+}
+.nav-container .header-nav-container .container > nav .main-nav__button {
+  background: linear-gradient(to bottom, #868885 0%, #2c2c2c 100%);
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.35s ease-in-out;
+}
+.nav-container .header-nav-container .container > nav .main-nav__button::after {
+  content: unset;
+}
+.nav-container .header-nav-container .container > nav .main-nav__button > p {
+  display: block;
+  position: relative;
+  margin-right: 25px;
+}
+.nav-container .header-nav-container .container > nav .main-nav__button > p::after {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.111rem;
+  transition: width 0.35s ease-in-out;
+}
+.nav-container .header-nav-container .container > nav .main-nav__button > img {
+  transform: translateY(1px);
+}
+.nav-container .header-nav-container .container > nav .main-nav__button:hover, .nav-container .header-nav-container .container > nav .main-nav__button:focus {
+  transform: scale(1.1);
+}
+.nav-container .header-nav-container .container > nav .main-nav__button:hover > p::after, .nav-container .header-nav-container .container > nav .main-nav__button:focus > p::after {
+  width: 100%;
+}
+.nav-container .header-nav-container .container > nav .main-nav__button:hover > img, .nav-container .header-nav-container .container > nav .main-nav__button:focus > img {
+  animation: shake 0.35s ease-in-out;
+}
+.nav-container .hero-cta > .container {
+  background: #c6c6c4;
+  border-radius: 25px;
+  margin-top: 25px;
+  position: relative;
+  padding: unset;
+}
+.nav-container .hero-cta > .container .hero-cta__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 5px 50px 5px 25px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.nav-container .hero-cta > .container .hero-cta__content .caption {
+  text-decoration: underline;
+  transition: color 0.35s ease-in-out;
+}
+.nav-container .hero-cta > .container .hero-cta__content .caption::after {
+  content: unset;
+}
+.nav-container .hero-cta > .container .hero-cta__content .caption:hover, .nav-container .hero-cta > .container .hero-cta__content .caption:focus {
+  color: #21BA9E;
+}
+.nav-container .hero-cta > .container #hero-cta-button {
+  padding: unset;
+  margin: unset;
+  background: unset;
+  border: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}
+.nav-container .hero-cta > .container #hero-cta-button > svg path {
+  transition: stroke 0.35s ease-in-out, stroke-opacity 0.35s ease-in-out;
+}
+.nav-container .hero-cta > .container #hero-cta-button:hover > svg path, .nav-container .hero-cta > .container #hero-cta-button:focus > svg path {
+  stroke: #21BA9E;
+  stroke-opacity: 1;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  background-image: url("../img/img-hero-banner.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero-container > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  min-height: 75vh;
+  max-height: 100vh;
+}
+.hero-container > .container > h1, .hero-container > .container > p {
+  color: #ffffff;
+}
+.hero-container > .container > h1 {
+  padding-top: 75px;
+}
+.hero-container > .container > p {
+  font-size: clamp(20px, 1.25vw, 24px);
+}
+.hero-container > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.breadcrumb-container {
+  padding: 100px 0;
+}
+.breadcrumb-container .container #breadcrumb {
+  display: flex;
+  gap: 10px;
+  color: #9f9f9f;
+}
+.breadcrumb-container .container #breadcrumb > a {
+  color: #9f9f9f;
+}
+.breadcrumb-container .container #breadcrumb > a::after {
+  background: #9f9f9f;
+}
+.breadcrumb-container .container #breadcrumb > .current-page {
+  color: #515151;
+}
+
+/*# sourceMappingURL=style.css.map */
