@@ -11,15 +11,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   transition: font-size 0.35s ease-in-out;
   font-weight: 700;
   color: variables.$title-color;
+  padding-bottom: clamp(15px, 1.302vw, 25px);
 }
 
 h1, .h1 {
   font-size: clamp(48px, 2.917vw, 56px);
+  padding-bottom: unset;
 }
 
 h2, .h2 {
   font-size: clamp(40px, 2.5vw, 48px);
-  padding-bottom: 25px;
 }
 
 h3, .h3 {

@@ -1,0 +1,9 @@
+.help-section-container {
+    .container {
+        .paragraph {
+            &:not(:last-child) {
+                margin-bottom: clamp(25px, 2.604vw, 50px);
+            }
+        }
+    }
+}

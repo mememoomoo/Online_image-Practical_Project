@@ -163,6 +163,9 @@
             margin-top: 25px;
             position: relative;
             padding: unset;
+            height: 0;
+            animation: height 0.5s ease-in-out 0.5s forwards;
+            overflow: hidden;
 
             .hero-cta__content {
                 display: flex;

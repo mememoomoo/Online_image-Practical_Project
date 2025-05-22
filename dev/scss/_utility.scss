@@ -16,3 +16,8 @@
     80% { transform: rotate(-10deg); }
     100% { transform: rotate(0deg); }
 }
+
+@keyframes height {
+    0% { height: 0; }
+    100% { height: 35px; }
+}
