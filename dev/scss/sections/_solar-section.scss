@@ -1,0 +1,26 @@
+@use "../global/variables";
+
+.solar-section-container {
+    background-image: url('../img/img-final-cta-background.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    .container {
+        padding-top: variables.$lg-space;
+        padding-bottom: variables.$lg-space;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: variables.$md-space;
+
+        .content {
+            > h2, > p {
+                color: variables.$white-color;
+            }
+            > h2 {
+                padding-bottom: variables.$xs-space;
+            }
+        }
+    }
+}

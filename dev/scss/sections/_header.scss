@@ -1,4 +1,4 @@
-@use "variables";
+@use "../global/variables";
 
 .nav-container {
     position: absolute;
@@ -94,7 +94,7 @@
 
                 .main-nav {
                         display: flex;
-                        gap: clamp(15px, 1.302vw, 25px);
+                        gap: variables.$sm-space;
                         
                         a {
                             color: variables.$white-color;
@@ -118,9 +118,11 @@
                     }
 
                     > p {
+                        font-family: variables.$font-stack;
                         display: block;
                         position: relative;
                         margin-right: 25px;
+                        line-height: 1.2;
 
                         &::after {
                             content: '';
@@ -175,9 +177,14 @@
                 padding: 5px 50px 5px 25px;
                 width: fit-content;
                 margin: 0 auto;
+                
+                > p {
+                    line-height: 1;
+                }
 
                 .caption {
                     text-decoration: underline;
+                    line-height: 1;
                     transition: color 0.35s ease-in-out;
 
                     &::after {
@@ -265,12 +272,12 @@
 }
 
 .breadcrumb-container {
-    padding: 100px 0;
+    padding: variables.$lg-space 0;
 
     .container {
         #breadcrumb {
             display: flex;
-            gap: 10px;
+            gap: variables.$sm-space;
             color: #9f9f9f;
 
             > a {
@@ -278,6 +285,10 @@
                 &::after {
                     background: #9f9f9f;
                 }
+            }
+
+            > p {
+                line-height: 1.2;
             }
 
             > .current-page {

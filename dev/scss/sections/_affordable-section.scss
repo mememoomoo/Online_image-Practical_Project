@@ -1,0 +1,60 @@
+@use "../global/variables";
+
+.affordable-section-container {
+    > .affordable-section__hero-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    > .container {
+        transform: translateY(-80px);
+        //Correct Spacing, May need to adjust z-index
+        margin-bottom: -80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: variables.$sm-space;
+
+        .content {
+            max-width: 900px;
+            margin-top: 80px;
+        }
+        .side-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: fit-content;
+            background: variables.$white-color;
+            border: 2px solid #e7e7e7;
+            border-radius: 1px;
+            padding: variables.$md-space;
+
+            > .side-bar__content-container {
+                > ul {
+                    padding-bottom: variables.$sm-space;
+
+                    > li {
+                        position: relative;
+                        padding-left: 34px;
+
+                        &:before {
+                            content: '';
+                            background: url("../img/img-icon-CheckCircle.svg") no-repeat center center;
+                            width: 24px;
+                            height: 24px;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: variables.$xs-space;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

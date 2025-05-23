@@ -1,0 +1,26 @@
+@use "../global/variables";
+
+.services-section-container {
+    .container {
+        .services-grid {
+            margin-top: variables.$md-space;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: variables.$sm-space;
+            row-gap: variables.$md-space;
+
+            .grid-item {
+                > img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+
+                > h3 {
+                    margin-top: variables.$sm-space;
+                    padding-bottom: variables.$xs-space;
+                }
+            }
+        }
+    }
+}

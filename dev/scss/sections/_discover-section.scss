@@ -1,0 +1,19 @@
+@use "../global/variables";
+
+.discover-section-container {
+    background: #1b2725;
+
+    .container {
+        padding: 75px 12vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: radial-gradient(ellipse at center, rgba(123, 203, 187, 0.45) -40%, rgba(123, 203, 187, 0) 70%);
+
+        > h2 {
+            color: variables.$white-color;
+            line-height: 1;
+            padding-bottom: unset;
+        }
+    }
+}

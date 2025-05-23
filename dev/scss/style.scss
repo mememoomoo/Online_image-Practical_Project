@@ -1,4 +1,13 @@
-@use "fonts";
-@use "utility";
-@use "header";
-@use "help-section";
+//Global styles
+@use "global/fonts";
+@use "global/utility";
+
+//Section styles
+@use "sections/header";
+@use "sections/help-section";
+@use "sections/discover-section";
+@use "sections/services-section";
+@use "sections/affordable-section";
+@use "sections/faq-section";
+@use "sections/solar-section";
+@use "sections/footer";

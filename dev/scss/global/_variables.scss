@@ -1,0 +1,19 @@
+// Variables
+
+// Font
+$font-stack: "Lato", Arial, sans-serif;
+
+// Colors
+$title-color: #040503;
+$body-color: #515151;
+$white-color: #ffffff;
+$background-color: #E2E2E2;
+$green-color: #21BA9E;
+$light-green-color: #7BCBBB;
+
+// Spacing
+$xs-space: clamp(5px, 0.521vw, 10px);
+$sm-space: clamp(15px, 1.302vw, 25px);
+$md-space: clamp(25px, 2.604vw, 50px);
+$lg-space: clamp(50px, 5.208vw, 100px);
+$xl-space: clamp(100px, 7.813vw, 150px);
