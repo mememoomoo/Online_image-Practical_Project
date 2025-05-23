@@ -1,0 +1,53 @@
+@use "../global/variables";
+
+.faq-section-container {
+    .container {
+        .faq-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            .faq-item {
+                border: 2px solid #e7e7e7;
+                padding: 15px 15px 15px 0px;
+
+                &:not(:last-child) {
+                    margin-bottom: variables.$xs-space;
+                }
+
+                .faq-item__question {
+                    width: 100%;
+                    background: unset;
+                    border: unset;
+                    text-align: left;
+                    cursor: pointer;
+                    position: relative;
+                    padding-left: 50px;
+
+                    &::before {
+                        content: '';
+                        background: url('../img/img-icon-CaretCircleDown.svg') no-repeat center center;
+                        width: 33px;
+                        height: 32px;
+                        position: absolute;
+                        left: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        translate: all 0.35s ease-in-out;
+                    }
+
+                    &.open {
+                        .faq-item__question {
+                            &::before {
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+                        }
+                    }
+                }
+
+                .faq-item__answer {
+                    padding: 10px 0px 0px 50px;
+                }
+            }
+        }
+    }
+}

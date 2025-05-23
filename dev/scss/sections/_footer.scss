@@ -1,0 +1,112 @@
+@use "../global/variables";
+
+.footer-section-container {
+    background: #000000;
+    padding-top: variables.$lg-space;
+    padding-bottom: 15px;
+
+    > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footer__logo {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+
+            > img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.35s ease-in-out;
+            }
+
+            &::after {
+                content: unset;
+            }
+
+            &:hover,
+            &:focus {
+                > img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .footer__menu {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: variables.$lg-space;
+            border-bottom: solid 1px variables.$white-color;
+            padding-top: variables.$md-space;
+            padding-bottom: variables.$md-space;
+
+            > li {
+                > a {
+                    color: variables.$white-color;
+                    &::after {
+                        background: variables.$white-color;
+                    }
+                }
+            }
+        }
+
+        .footer__bottom-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-top: variables.$md-space;
+
+            > p {
+                color: variables.$white-color
+            }
+
+            > .legal-links {
+                display: flex;
+                > li {
+                    position: relative;
+                    &:not(:last-child) {
+                        padding-right: variables.$md-space;
+
+                        &::before {
+                            content: '|';
+                            font-size: 24px;
+                            color: variables.$white-color;
+                            position: absolute;
+                            top: calc(50% - 6px);
+                            transform: translateY(calc(-50% + 6px));
+                            right: calc(0.5 * variables.$md-space);
+                        } 
+                    }
+
+                    > a {
+                        color: variables.$white-color;
+                        &::after {
+                            background: variables.$white-color;
+                        }
+                    }
+                } 
+            }
+            
+            > .social-links {
+                display: flex;
+                gap: variables.$sm-space;
+
+                > li {
+                    > a {
+                        &::after {
+                            content: unset;
+                        }
+                        &:hover, &:focus {
+                            > img {
+                                animation: shake 0.35s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
