@@ -535,7 +535,6 @@ section:not(:last-of-type) {
 }
 .faq-section-container .container .faq-container .faq-item {
   border: 2px solid #e7e7e7;
-  padding: 15px 15px 15px 0px;
 }
 .faq-section-container .container .faq-container .faq-item:not(:last-child) {
   margin-bottom: clamp(5px, 0.521vw, 10px);
@@ -547,7 +546,7 @@ section:not(:last-of-type) {
   text-align: left;
   cursor: pointer;
   position: relative;
-  padding-left: 50px;
+  padding: 15px 15px 15px 50px;
 }
 .faq-section-container .container .faq-container .faq-item .faq-item__question::before {
   content: "";
@@ -564,7 +563,7 @@ section:not(:last-of-type) {
   transform: translateY(-50%) rotate(180deg);
 }
 .faq-section-container .container .faq-container .faq-item .faq-item__answer {
-  padding: 10px 0px 0px 50px;
+  padding: 0 15px 15px 50px;
 }
 
 .solar-section-container {
