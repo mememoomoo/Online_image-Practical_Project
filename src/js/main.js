@@ -100,4 +100,19 @@ document.addEventListener('DOMContentLoaded', function () {
             showMoreButton.blur();
         }, 600);
     });
+
+    let resizeTimeout;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            for (let i = 0; i < paragraphs.length; i++) {
+                if (i < showCount) {
+                    paragraphs[i].style.display = '';
+                    totalHeight += paragraphs[i].offsetHeight;
+                } else {
+                    paragraphs[i].style.display = 'none';
+                }
+            }
+        }, 150);
+    });
 });
