@@ -4,11 +4,10 @@
     .container {
 
         #showMoreSection {
-            margin-bottom: variables.$md-space;
+            // margin-bottom: variables.$md-space;
+            overflow: hidden;
             .paragraph {
-                &:not(:last-child) {
-                    margin-bottom: variables.$md-space;
-                }
+                padding-bottom: variables.$md-space;
             }
         }
 

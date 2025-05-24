@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who We Help | Sparrow Electric</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-32x32.png">
+    <link rel="manifest" href="src/img/favicon/site.webmanifest">
+
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/fonts.css">
     <link rel="stylesheet" href="src/css/style.css">
@@ -53,7 +58,7 @@
             </div>
         </div>
         <div class="hero-cta">
-            <div class="container">
+            <div id="heroCtaContainer" class="container">
                 <div class="hero-cta__content">
                     <img src="src/img/img-icon-Lightning.svg" aria-hidden="true" />
                     <p>Give us a call today and we will waive all financing fees.</p>
@@ -79,8 +84,8 @@
     </div>
     <div class="breadcrumb-container">
         <div class="container">
-            <div id="breadcrumb">
-                <a href="#" alt="Click to return Home">Home</a> / <p class="current-page">Who We Help</p>
+            <div class="breadcrumb">
+                <a href="#" alt="Click to return Home">Home</a> / <p id="currentPage"></p>
             </div>
         </div>
     </div>
@@ -115,7 +120,7 @@
                     <p>Nationwide, the federal Investment Tax Credit (ITC) is one of the primary incentives available to anyone interested in solar energy. The ITC tax credit allows you to deduct 26 percent of the cost of installing a solar system from your federal taxes. This incentive won't last forever - in 2023, the federal ITC steps down to 22 percent and then goes away entirely for residential solar installations in 2024.</p>
                 </div>
             </div>
-            <button class="button" id="showMoreButton" aria-label="Click to show more above content"><p>Show More</p></button>
+            <button class="button" id="showMoreButton" aria-label="Click to show more of the above content." data-gate="closed"><p>Show More</p></button>
         </div>
     </section>
     <section class="discover-section-container">
@@ -219,31 +224,31 @@
             <h2 class="center">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq1">Why Should I Purchase My Solar System Through Sparrow Electric?</button>
+                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq1" aria-label="Click to expand the answer.">Why Should I Purchase My Solar System Through Sparrow Electric?</button>
                     <div class="faq-item__answer" id="faq1" hidden>
                         <p>With a solar loan through Sparrow's financing, homeowners will own their system through monthly payments. Ownership of their residential solar panels delivers the highest return on investment of all the financing options. Ownership also presents other opportunities for savings through tax credits, tax incentives, and increasing the value of your property.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq2">Does Sparrow Electric Require a down payment for their solar options?</button>
+                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq2" aria-label="Click to expand the answer.">Does Sparrow Electric Require a down payment for their solar options?</button>
                     <div class="faq-item__answer" id="faq2" hidden>
                         <p>Sparrow Electric's financing options don't require a deposit because we help you secure funding to cover the total purchase price with the benefit of zeroing out your energy costs upon the installation.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq3">How does the solar tax credit work?</button>
+                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq3" aria-label="Click to expand the answer.">How does the solar tax credit work?</button>
                     <div class="faq-item__answer" id="faq3" hidden>
                         <p>Homeowners who qualify for a federal tax liability can save money on their installation and ownership process. Currently, paying for the system with a loan means homeowners can utilize the 30% Federal Solar Tax Credit, and they can deduct 30% of their solar installation costs from their tax liability.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq4">Will I Save Money With Sparrow Electric's Solar Financing?</button>
+                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq4" aria-label="Click to expand the answer.">Will I Save Money With Sparrow Electric's Solar Financing?</button>
                     <div class="faq-item__answer" id="faq4" hidden>
                         <p>You can also look forward to compound savings that occur over time through our residential solar system ownership program. We have fixed payment rates for our home solar power systems, so as the cost of power inevitably increases, you will save more and more money as the price of electricity increases.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq5">How Much Will I Save If I Go Solar?</button>
+                    <button class="faq-item__question" aria-expanded="false" aria-controls="faq5" aria-label="Click to expand the answer.">How Much Will I Save If I Go Solar?</button>
                     <div class="faq-item__answer" id="faq5" hidden>
                         <p>There is no way to accurately predict precisely how much this will save them in the long run, because it’s hard to forecast how much electricity rates will go up. Recent studies show how installing solar on your home can add an average of around $20,000 to a home. Having that system paid off can make a home more enticing to buyers.</p>
                     </div>

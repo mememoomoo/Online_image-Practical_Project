@@ -88,8 +88,11 @@ a:hover::after, a:focus::after {
 }
 .container {
   max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 clamp(75px, 8vw, 150px);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(75px, 8vw, 150px);
+  padding-right: clamp(75px, 8vw, 150px);
 }
 
 .center {
@@ -196,12 +199,20 @@ section:not(:last-of-type) {
     transform: rotate(0deg);
   }
 }
-@keyframes height {
+@keyframes heroCtaOpen {
   0% {
     height: 0;
   }
   100% {
     height: 35px;
+  }
+}
+@keyframes heroCtaClose {
+  0% {
+    height: 35px;
+  }
+  100% {
+    height: 0;
   }
 }
 .nav-container {
@@ -330,8 +341,11 @@ section:not(:last-of-type) {
   position: relative;
   padding: unset;
   height: 0;
-  animation: height 0.5s ease-in-out 0.5s forwards;
+  animation: heroCtaOpen 0.5s ease-in-out 0.5s forwards;
   overflow: hidden;
+}
+.nav-container .hero-cta > .container.closed {
+  animation: heroCtaClose 0.5s ease-in-out forwards;
 }
 .nav-container .hero-cta > .container .hero-cta__content {
   display: flex;
@@ -339,7 +353,7 @@ section:not(:last-of-type) {
   align-items: center;
   gap: 25px;
   padding: 5px 50px 5px 25px;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
 }
 .nav-container .hero-cta > .container .hero-cta__content > p {
@@ -418,29 +432,30 @@ section:not(:last-of-type) {
 .breadcrumb-container {
   padding: clamp(50px, 5.208vw, 100px) 0;
 }
-.breadcrumb-container .container #breadcrumb {
+.breadcrumb-container .container .breadcrumb {
   display: flex;
   gap: clamp(15px, 1.302vw, 25px);
   color: #9f9f9f;
 }
-.breadcrumb-container .container #breadcrumb > a {
+.breadcrumb-container .container .breadcrumb > a {
   color: #9f9f9f;
 }
-.breadcrumb-container .container #breadcrumb > a::after {
+.breadcrumb-container .container .breadcrumb > a::after {
   background: #9f9f9f;
 }
-.breadcrumb-container .container #breadcrumb > p {
+.breadcrumb-container .container .breadcrumb > p {
   line-height: 1.2;
 }
-.breadcrumb-container .container #breadcrumb > .current-page {
+.breadcrumb-container .container .breadcrumb > #currentPage {
   color: #515151;
+  transition: height 1s ease-in-out;
 }
 
 .help-section-container .container #showMoreSection {
-  margin-bottom: clamp(25px, 2.604vw, 50px);
+  overflow: hidden;
 }
-.help-section-container .container #showMoreSection .paragraph:not(:last-child) {
-  margin-bottom: clamp(25px, 2.604vw, 50px);
+.help-section-container .container #showMoreSection .paragraph {
+  padding-bottom: clamp(25px, 2.604vw, 50px);
 }
 .help-section-container .container > .button {
   display: block;
@@ -547,6 +562,7 @@ section:not(:last-of-type) {
   cursor: pointer;
   position: relative;
   padding: 15px 15px 15px 50px;
+  transition: color 0.35s ease-in-out;
 }
 .faq-section-container .container .faq-container .faq-item .faq-item__question::before {
   content: "";
@@ -556,11 +572,14 @@ section:not(:last-of-type) {
   position: absolute;
   left: 10px;
   top: 50%;
-  transform: translateY(-50%);
-  translate: all 0.35s ease-in-out;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.35s ease-in-out;
 }
-.faq-section-container .container .faq-container .faq-item .faq-item__question.open .faq-item__question::before {
+.faq-section-container .container .faq-container .faq-item .faq-item__question[aria-expanded=true]::before {
   transform: translateY(-50%) rotate(180deg);
+}
+.faq-section-container .container .faq-container .faq-item .faq-item__question:hover, .faq-section-container .container .faq-container .faq-item .faq-item__question:focus {
+  color: #21BA9E;
 }
 .faq-section-container .container .faq-container .faq-item .faq-item__answer {
   padding: 0 15px 15px 50px;
